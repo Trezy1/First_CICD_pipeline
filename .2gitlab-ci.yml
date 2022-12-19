@@ -1,0 +1,7 @@
+run test: 
+    image: python:3.9-slim-buster
+    before_sript:
+        - apt-get update && apt-get install make 
+    script:
+        make test
+            
