@@ -1,5 +1,5 @@
 variables:
-  IMAGE_NAME: trez123/trez123
+  IMAGE_NAME: trezy123123
   IMAGE_TAG: python-app-1.0
 
 stages:
@@ -24,7 +24,7 @@ build_image:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
-    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
+    - docker login -u $REGISTRY_USER -p $REGISTRY_PASSWORD
   script:
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
     - docker push $IMAGE_NAME:$IMAGE_TAG
