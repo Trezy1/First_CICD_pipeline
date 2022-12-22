@@ -27,7 +27,7 @@ build_image:
     - docker login -u $REGISTRY_USER -p $REGISTRY_PASS
   script:
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
-    - docker push $IMAGE_NAME:$IMAGE_TAG
+    - docker push docker pull trezy123123/my_project
 
 
 deploy:
