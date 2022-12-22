@@ -1,6 +1,6 @@
 variables:
   IMAGE_NAME: trezy123123/my_project
-  IMAGE_TAG: trezy123123
+  IMAGE_TAG: python-sample
 
 stages:
   - test
