@@ -26,13 +26,8 @@ Live instances:
 - Be using Linux, WSL or MacOS, with bash, make etc
 - [Python 3.8+](https://www.python.org/downloads/) - for running locally, linting, running tests etc
 - [Docker](https://docs.docker.com/get-docker/) - for running as a container, or image build and push
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux) - for deployment to Azure
+- Ubuntu server
 
-Clone the project to any directory where you do development work
-
-```
-git clone https://github.com/benc-uk/python-demoapp.git
-```
 
 ### Makefile
 
