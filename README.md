@@ -4,7 +4,7 @@ This is a simple Python Flask web application. The app provides system informati
 
 The app has been designed with cloud native demos & containers in mind, in order to provide a real working application for deployment, something more than "hello-world" but with the minimum of pre-reqs. It is not intended as a complete example of a fully functioning architecture or complex software design.
 
-Typical uses would be deployment to Kubernetes, demos of Docker, CI/CD (build pipelines are provided), deployment to cloud (Azure) monitoring, auto-scaling
+Typical uses would be deployment to demos of Docker, CI/CD (build pipelines are provided), deployment to Ubuntu server (digital ocean).
 
 ## Screenshot
 
@@ -82,30 +82,4 @@ Should you want to build your own container, use `make image` and the above vari
 
 The app can easily be deployed to Kubernetes using Helm, see [deploy/kubernetes/readme.md](deploy/kubernetes/readme.md) for details
 
-# GitHub Actions CI/CD
 
-A working set of CI and CD release GitHub Actions workflows are provided `.github/workflows/`, automated builds are run in GitHub hosted runners
-
-### [GitHub Actions](https://github.com/benc-uk/python-demoapp/actions)
-
-[![](https://img.shields.io/github/workflow/status/benc-uk/python-demoapp/CI%20Build%20App)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CI+Build+App%22)
-
-[![](https://img.shields.io/github/workflow/status/benc-uk/python-demoapp/CD%20Release%20-%20AKS?label=release-kubernetes)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CD+Release+-+AKS%22)
-
-[![](https://img.shields.io/github/workflow/status/benc-uk/python-demoapp/CD%20Release%20-%20Webapp?label=release-azure)](https://github.com/benc-uk/python-demoapp/actions?query=workflow%3A%22CD+Release+-+Webapp%22)
-
-[![](https://img.shields.io/github/last-commit/benc-uk/python-demoapp)](https://github.com/benc-uk/python-demoapp/commits/master)
-
-## Running in Azure App Service (Linux)
-
-If you want to deploy to an Azure Web App as a container (aka Linux Web App), a Bicep template is provided in the [deploy](deploy/) directory
-
-For a super quick deployment, use `make deploy` which will deploy to a resource group, temp-demoapps and use the git ref to create a unique site name
-
-```bash
-make deploy
-```
-
-## Running in Azure App Service (Windows)
-
-Just don't, it's awful 
