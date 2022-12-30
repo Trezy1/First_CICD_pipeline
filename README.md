@@ -66,20 +66,6 @@ Make file variables and default values, pass these in when calling `make`, e.g. 
 
 The app runs under Flask and listens on port 5000 by default, this can be changed with the `PORT` environmental variable.
 
-# Containers
 
-Public container image is [available on GitHub Container Registry](https://github.com/users/benc-uk/packages/container/package/python-demoapp)
-
-Run in a container with:
-
-```bash
-docker run --rm -it -p 5000:5000 ghcr.io/benc-uk/python-demoapp:latest
-```
-
-Should you want to build your own container, use `make image` and the above variables to customise the name & tag.
-
-## Kubernetes
-
-The app can easily be deployed to Kubernetes using Helm, see [deploy/kubernetes/readme.md](deploy/kubernetes/readme.md) for details
 
 
