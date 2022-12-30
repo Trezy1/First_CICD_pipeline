@@ -12,17 +12,13 @@ Typical uses would be deployment to demos of Docker, CI/CD (build pipelines are 
 
 
 
-Live instances:
-
-[![](https://img.shields.io/website?label=Hosted%3A%20Azure%20App%20Service&up_message=online&url=https%3A%2F%2Fpython-demoapp.azurewebsites.net%2F)](https://python-demoapp.azurewebsites.net/)  
-[![](https://img.shields.io/website?label=Hosted%3A%20Kubernetes&up_message=online&url=https%3A%2F%2Fpython-demoapp.kube.benco.io%2F)](https://python-demoapp.kube.benco.io/)
 
 ## Building & Running Locally
 
 ### Pre-reqs
 
 - Be using Linux, WSL or MacOS, with bash, make etc
-- [Python 3.8+](https://www.python.org/downloads/) - for running locally, linting, running tests etc
+- [Python 3.11+](https://www.python.org/downloads/) - for running locally, linting, running tests etc
 - [Docker](https://docs.docker.com/get-docker/) - for running as a container, or image build and push
 - Ubuntu server
 
