@@ -16,6 +16,12 @@ run_tests:
     - make test
 
 
+# Make test command will be excuted because of the makefile as its a special file that contains shell commands.
+# For the test to run it will need make command available line 14, pip available to install dependencies and eventually python installed on the machine because the test is written in pythin language. 
+# Line 12, its python image (container) and can be found in dockerhub.
+# line 14, I had to make sure make command is available inside the container before running the test. 
+
+
 build_image:
   stage: build
   image: docker:20.10.16
@@ -29,6 +35,8 @@ build_image:
     - docker build -t $IMAGE_NAME:$IMAGE_TAG .
     - docker push $IMAGE_NAME:$IMAGE_TAG
 
+# The log in details in line 33 is a reference to my actual docker password created in my gitllaab settings as variables. 
+# Line 35-36 values are defined in variables section above line 2-3,whoch is my docker repository details and image tag.
 
 deploy:
   stage: deploy
@@ -39,3 +47,9 @@ deploy:
         docker login -u $REGISTRY_USER -p $REGISTRY_PASS &&
         docker ps -aq | xargs docker stop | xargs docker rm &&
         docker run -d -p 5000:5000 $IMAGE_NAME:$IMAGE_TAG"
+
+
+# In line 46, I have disabled the manual input to connect directly to the remote servr. I have also created a variable name SSH_key which is my provate key to connect to the specified IP addrress. 
+# I have deployed the app on ubuntu server using digital oceans and the pipeline will not deploy because the I have deleted the server to avoid charges. For deployment to be excuted it needs the IP address changes( 165.227.164.70) and use running server and then the pipeline will work. 
+
+# line 45 needs to be deleted for the docker to run for the first time and then put the values back in line 40 and run the pipeline again. The reason is because I have to make sure to stop and remive any existing container on port 5000 so new one can be created. 
